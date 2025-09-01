@@ -1,64 +1,25 @@
 <?php
-session_start(); 
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php"); // Redirect if not logged in
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location: login.php");
     exit();
 }
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            background: #333;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            padding: 10px 20px;
-            background: #444;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        nav a:hover {
-            background: #666;
-        }
-
-        section {
-            padding: 50px;
-            text-align: center;
-        }
-    </style>
+    <title>Dominic's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation buttons -->
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="about.php">About Me</a>
-        <a href="contact.php">Contact</a>
-        <a href="logout.php">Logout</a>
-    </nav>
+<div class="portfolio">
+    <h1>Hello everyone 👋</h1>
+    <h2>Hello! My name is Dominic Evander Daniel, and I am currently in the 8th grade. I enjoy spending my time swimming, as it helps me stay active and focused. I am also passionate about Formula 1, where I admire the combination of speed, strategy, and precision. These interests inspire me to stay dedicated, improve myself, and always aim for excellence both inside and outside of school.</h2>
+    <p>Welcome to my portfolio website. Here you'll find information about my projects, skills, and experiences.</p>
+    <h3>Projects</h3>
+    <ul>
 
-    <!-- Home Section -->
-    <section>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hello, <?php echo $_SESSION['username']; ?>! This is the home page of your portfolio.</p>
-    </section>
+    <a href="logout.php" class="logout-btn">Logout</a>
+</div>
 </body>
 </html>
